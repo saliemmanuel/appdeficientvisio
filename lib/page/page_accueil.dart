@@ -1,5 +1,7 @@
-import 'package:appdeficientvisio/page/cours_screen.dart';
-import 'package:appdeficientvisio/widget/customRoute.dart';
+import 'package:animate_do/animate_do.dart';
+import 'package:appdeficientvisio/page/page_cours.dart';
+import 'package:appdeficientvisio/page/page_parametre.dart';
+import 'package:appdeficientvisio/widget/widget_route.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -17,7 +19,6 @@ class HomePageState extends State<HomePage> {
   String welcomText2 =
       "Taper en haut à droit pour acceder au parmètre de l'application, taper deux fois pour passer à la page suivante, où taper une fois pour que je me repète";
 
-  bool isListening = false;
   @override
   void initState() {
     super.initState();
@@ -29,7 +30,11 @@ class HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Text('Appdeficientvisio'),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
+            IconButton(
+                onPressed: () {
+                  pushNewPage(const PageParametre(), context);
+                },
+                icon: const Icon(Icons.settings))
           ],
         ),
         body: InkWell(
@@ -43,29 +48,36 @@ class HomePageState extends State<HomePage> {
                 glowColor: Theme.of(context).primaryColor,
                 child: FloatingActionButton(
                   onPressed: ftts,
-                  child: Icon(
-                      isListening
-                          ? Icons.record_voice_over_rounded
-                          : Icons.record_voice_over_rounded,
-                      size: 36),
+                  child: const Icon(Icons.record_voice_over_rounded, size: 36),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text.rich(
-                  TextSpan(
-                      style: TextStyle(fontSize: 18.0),
-                      text: "Bonjours",
-                      children: [
-                        TextSpan(text: " bienvenue sur"),
-                        TextSpan(
-                            text: " App deficient visuo",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        TextSpan(
-                            text:
-                                ", Nous allons commencer par configurer ensemble l'application"),
-                      ]),
+              FadeInUp(
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text.rich(
+                    TextSpan(
+                        style: TextStyle(fontSize: 18.0),
+                        text: "Bonjours",
+                        children: [
+                          TextSpan(text: " bienvenue sur"),
+                          TextSpan(
+                              text: " App deficient visuo",
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          TextSpan(
+                              text:
+                                  ", Nous allons commencer par configurer ensemble l'application"),
+                        ]),
+                  ),
                 ),
+              ),
+              FadeInUp(
+                delay: const Duration(seconds: 3),
+                child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      style: const TextStyle(fontSize: 18.0),
+                      welcomText2,
+                    )),
               ),
             ],
           ),

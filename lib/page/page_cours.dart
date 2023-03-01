@@ -1,3 +1,5 @@
+import 'package:appdeficientvisio/page/page_liste_cours.dart';
+import 'package:appdeficientvisio/widget/widget_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -48,8 +50,11 @@ class _CoursScreenState extends State<CoursScreen> {
                     title: const Text("Compétence"),
                     subtitle: Text(
                       competence,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
+                    onTap: () {
+                      pushNewPage(const PageListeCours(), context);
+                    },
                   ),
                 ),
               ),

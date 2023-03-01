@@ -1,7 +1,9 @@
+import 'package:appdeficientvisio/state_management/provider/home_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
-import 'page/home_page.dart';
+import 'page/page_accueil.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,7 +12,10 @@ Future main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (context) => HomeProvider())],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,10 +24,11 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.purple),
-        home: const HomePage(),
-      );
+  Widget build(BuildContext context) => Consumer<HomeProvider>(
+      builder: (context, state, child) => MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: title,
+            theme: state.themeData,
+            home: const HomePage(),
+          ));
 }
