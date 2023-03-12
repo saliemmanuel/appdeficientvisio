@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850772937134",
+    "project_id": "appdeficientvisuo-4d663",
+    "storage_bucket": "appdeficientvisuo-4d663.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850772937134:android:80d822e7d55cca463d203f",
+        "android_client_info": {
+          "package_name": "com.example.appdeficientvisio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850772937134-ft5taaebl6cqqugdmovqme4b93dugpb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC7ZFZrhAlt2Y7TkmtlEZAoqCFsqZritU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850772937134-ft5taaebl6cqqugdmovqme4b93dugpb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
