@@ -104,8 +104,10 @@ class _PageListeMetiereState extends State<PageListeMetiere> {
 
   choixMatiere() {
     counter++;
-    Provider.of<HomeProvider>(context, listen: false)
-        .ftts(data[counter]['intitule']!);
-    if (counter == data.length) counter = 0;
+    if (data.isNotEmpty) {
+      if (counter == data.length) counter = 0;
+      Provider.of<HomeProvider>(context, listen: false)
+          .ftts(data[counter]['intitule']!);
+    }
   }
 }

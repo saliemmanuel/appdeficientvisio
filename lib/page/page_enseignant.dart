@@ -28,7 +28,7 @@ class PageEnseignant extends StatelessWidget {
                   onPressed: () {
                     pushNewPage(const PageConnexionEnseignant(), context);
                   },
-                  child: const Text("Se connecter à un compte enseignant"))
+                  child: const Text("Se connecter au compte enseignant"))
             ],
           ),
         ),

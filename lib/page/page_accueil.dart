@@ -22,9 +22,9 @@ class PageAccueil extends StatefulWidget {
 }
 
 class PageAccueilState extends State<PageAccueil> {
-  String welcomText = "Bienvenue sur App deficient visio.";
+  String welcomText = "Bienvenue sur App deficient visio";
   String welcomText2 =
-      "Taper en haut à droit pour acceder au parmètre de l'application, taper deux fois pour passer à la page suivante, où taper une fois pour que je me repète";
+      "Taper en haut à droit pour acceder au parmètre de l'application taper deux fois pour passer à la page suivante où taper une fois pour que je me repète";
 
   @override
   void initState() {

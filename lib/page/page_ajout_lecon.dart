@@ -99,7 +99,8 @@ class PageAjoutLecon extends StatelessWidget {
                             ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                     backgroundColor: Colors.green,
-                                    content: Text("Leçon publié avec succès")));
+                                    content:
+                                        Text("Leçon ajouter avec succès")));
                             intitule.clear();
                             resume.clear();
                             competence.clear();
@@ -107,7 +108,7 @@ class PageAjoutLecon extends StatelessWidget {
                           });
                         }
                       },
-                      child: const Text("Publiez")),
+                      child: const Text("Ajouter")),
                 ],
               )
             ],
