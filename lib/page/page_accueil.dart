@@ -22,9 +22,9 @@ class PageAccueil extends StatefulWidget {
 }
 
 class PageAccueilState extends State<PageAccueil> {
-  String welcomText = "Bienvenue sur App deficient visio";
+  String welcomText = "Bienvenue sur App Deficient Visuo";
   String welcomText2 =
-      "Taper en haut à droit pour acceder au parmètre de l'application taper deux fois pour passer à la page suivante où taper une fois pour que je me repète";
+      "Taper en haut à droite pour accéder aux parmètres de l'application \nTaper deux fois pour passer à la page suivante \nTaper une fois pour que je me repète";
 
   @override
   void initState() {
@@ -87,18 +87,21 @@ class PageAccueilState extends State<PageAccueil> {
                   child: const Icon(Icons.record_voice_over_rounded, size: 36),
                 ),
               ),
-              FadeInUp(
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text.rich(
-                    TextSpan(
-                        style: TextStyle(fontSize: 36.0),
-                        text: "Bienvenue sur",
-                        children: [
-                          TextSpan(
-                              text: " App Deficient Visuo",
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                        ]),
+              Center(
+                child: FadeInUp(
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text.rich(
+                      textAlign: TextAlign.center,
+                      TextSpan(
+                          style: TextStyle(fontSize: 36.0),
+                          text: "Bienvenue sur ",
+                          children: [
+                            TextSpan(
+                                text: "AppDeficientVisuo",
+                                style: TextStyle(fontWeight: FontWeight.bold)),
+                          ]),
+                    ),
                   ),
                 ),
               ),
@@ -107,6 +110,7 @@ class PageAccueilState extends State<PageAccueil> {
                 child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
+                      textAlign: TextAlign.center,
                       style: const TextStyle(fontSize: 18.0),
                       welcomText2,
                     )),

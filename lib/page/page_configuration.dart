@@ -15,10 +15,9 @@ class PageConfiguration extends StatefulWidget {
 }
 
 class _PageConfigurationState extends State<PageConfiguration> {
-  String title = 'AppDeficientVisuo';
+  String title = 'Configuration AppDeficientVisuo';
   String choix =
-      """Tapez une fois sur l'ecran pour continué avec la synthèse vocal,
-  ou tapez deux fois pour continuer sans la synthèse vocal.""";
+      "Taper une fois sur l'écran pour continuer avec la synthèse vocale, ou taper deux fois pour continuer sans la synthèse vocale.";
   @override
   void initState() {
     super.initState();
@@ -84,9 +83,11 @@ class _PageConfigurationState extends State<PageConfiguration> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CustomText(choix),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CustomText(choix, textAlign: TextAlign.center),
+                ),
               ),
             ],
           ),

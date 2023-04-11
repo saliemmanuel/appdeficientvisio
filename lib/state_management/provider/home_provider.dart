@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 // La class HomeProvider est la classe dédier pour gerer l'etat de l'application
 class HomeProvider extends ChangeNotifier {
-  // variable qui permet de dire si la le mode sombre est activer ou pas
+  // variable qui permet de dire si le mode sombre est activer ou pas
   bool _darkThemeIsActived = false;
 
   // declaration du thème de l'application

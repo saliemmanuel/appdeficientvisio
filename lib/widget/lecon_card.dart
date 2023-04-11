@@ -10,7 +10,7 @@ class LeconCard extends StatefulWidget {
   final String? competence;
   final String? contenue;
   final String? idEnseignant;
-  final isTeacherScreen;
+  final bool isTeacherScreen;
   const LeconCard(
       {super.key,
       this.intitule,

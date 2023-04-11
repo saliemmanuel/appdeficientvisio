@@ -20,7 +20,7 @@ class PageListeMetiere extends StatefulWidget {
 }
 
 class _PageListeMetiereState extends State<PageListeMetiere> {
-  String title = "Liste des matière";
+  String title = "Liste des matières";
   var data = [];
   var storage = Storage();
 
